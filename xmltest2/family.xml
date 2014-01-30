@@ -1,0 +1,15 @@
+<map>
+  <entry>
+    <string>Nazwa</string>
+    <model.Family>
+      <familyName>Nazwa</familyName>
+      <characteristic>Cecha charakterystyczna</characteristic>
+      <averageLimbCount>6.0</averageLimbCount>
+      <phylum>
+        <phylumName>Nazwa</phylumName>
+        <population>8</population>
+        <anatomy>Budowa</anatomy>
+      </phylum>
+    </model.Family>
+  </entry>
+</map>

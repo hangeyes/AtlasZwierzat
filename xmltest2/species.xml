@@ -1,0 +1,44 @@
+<map>
+  <entry>
+    <string>Nazwa</string>
+    <model.Species>
+      <speciesName>Nazwa</speciesName>
+      <discoveryDate>Data odkrycia</discoveryDate>
+      <limbCount>8</limbCount>
+      <representantName>Przedstawiciel</representantName>
+      <family>
+        <familyName>Nazwa</familyName>
+        <characteristic>Cecha charakterystyczna</characteristic>
+        <averageLimbCount>6.0</averageLimbCount>
+        <phylum>
+          <phylumName>Nazwa</phylumName>
+          <population>8</population>
+          <anatomy>Budowa</anatomy>
+        </phylum>
+      </family>
+    </model.Species>
+  </entry>
+  <entry>
+    <string>Nazwa2</string>
+    <model.Hybrid>
+      <speciesName>Nazwa2</speciesName>
+      <discoveryDate>Data odkrycia</discoveryDate>
+      <limbCount>6</limbCount>
+      <representantName>Przedstawiciel</representantName>
+      <family>
+        <familyName>Nazwa</familyName>
+        <characteristic>Cecha charakterystyczna</characteristic>
+        <averageLimbCount>6.0</averageLimbCount>
+        <phylum>
+          <phylumName>Nazwa</phylumName>
+          <population>8</population>
+          <anatomy>Budowa</anatomy>
+        </phylum>
+      </family>
+      <speciesNames>
+        <string>Nazwa</string>
+        <string>Nazwa</string>
+      </speciesNames>
+    </model.Hybrid>
+  </entry>
+</map>

@@ -1,0 +1,10 @@
+<map>
+  <entry>
+    <string>Nazwa</string>
+    <model.Phylum>
+      <phylumName>Nazwa</phylumName>
+      <population>8</population>
+      <anatomy>Budowa</anatomy>
+    </model.Phylum>
+  </entry>
+</map>
