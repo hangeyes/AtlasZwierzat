@@ -18,6 +18,9 @@ public class SaveLoadTab extends JPanel{
     JButton saveButton;
     JButton loadButton;
     
+    /**
+     *
+     */
     public SaveLoadTab()
     {
         saveButton = new JButton("Zapisz do pliku");

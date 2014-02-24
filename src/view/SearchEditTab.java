@@ -32,8 +32,10 @@ public class SearchEditTab extends JPanel{
     JLabel representantLabel = new JLabel("");
     JLabel discoveryDateLabel = new JLabel("");
     JComboBox searchResultsCB = new JComboBox();
-    
-    
+
+    /**
+     *
+     */
     public SearchEditTab()
     {
         searchTextField = new JTextField("Wpisz nazwę");

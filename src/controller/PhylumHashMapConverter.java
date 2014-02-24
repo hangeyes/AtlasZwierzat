@@ -16,10 +16,16 @@ import model.Phylum;
 
 /**
  *
- * @author Hangeyes
+ * Class used in converting PhylumHashMap from Model into xml and reversing it. For more details check xstream library documentation.
  */
 public class PhylumHashMapConverter implements Converter{
 
+    /**
+     *
+     * @param o
+     * @param writer
+     * @param mc
+     */
     @Override
     public void marshal(Object o, HierarchicalStreamWriter writer, MarshallingContext mc) {
         HashMap<String, Phylum> phylumHashMap = (HashMap<String, Phylum>) o;
@@ -36,6 +42,12 @@ public class PhylumHashMapConverter implements Converter{
         }
     }
 
+    /**
+     *
+     * @param reader
+     * @param uc
+     * @return
+     */
     @Override
     public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext uc) {
         HashMap<String, Phylum> phylumHashMap = new HashMap<String, Phylum>();
@@ -52,6 +64,11 @@ public class PhylumHashMapConverter implements Converter{
         return phylumHashMap;
     }
 
+    /**
+     *
+     * @param type
+     * @return
+     */
     @Override
     public boolean canConvert(Class type) {
         return PhylumHashMapConverter.class == type;

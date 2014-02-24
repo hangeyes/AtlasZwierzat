@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/model/Model.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/view/AddTab.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/view/SearchEditTab.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/view/TabbedMenu.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/model/Species.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/controller/Controller.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/view/View.java</file>
-            <file>file:/D:/Development/Java/Atlas%20Zwierząt/src/main/Atlas.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/view/View.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/view/SaveLoadTab.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/view/SearchEditTab.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/controller/SpeciesHashMapConverter.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/view/AddTab.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/view/TabbedMenu.java</file>
+            <file>file:/D:/Development/Java/AtlasZwierzat/src/controller/FamilyHashMapConverter.java</file>
         </group>
     </open-files>
 </project-private>

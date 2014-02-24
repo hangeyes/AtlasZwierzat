@@ -55,6 +55,11 @@ public class Controller {
     private File speciesFile;
     private Boolean loading;
     
+    /**
+     *
+     * @param theView
+     * @param theModel
+     */
     public Controller(View theView, Model theModel)
     {
         this.theView = theView;
@@ -94,6 +99,9 @@ public class Controller {
         this.loading = loading;
     }
     
+    /**
+     *Action listener for SearchResult ComboBox in Search Tab
+     */
     public class SearchResultsComboBoxActionListener implements ActionListener
     {
 
@@ -133,6 +141,9 @@ public class Controller {
         
     }
     
+    /**
+     * Action listener for Delete button
+     */
     public class DeleteButtonActionListener implements ActionListener {
         
         @Override
@@ -177,6 +188,9 @@ public class Controller {
         }
     }
     
+    /**
+     *Action listener for Edit button in Add Tab
+     */
     public class EditButtonActionListener implements ActionListener {
         
         @Override
@@ -265,6 +279,9 @@ public class Controller {
         }
     }
     
+    /**
+     *Action listener for Add button in Add tab
+     */
     public class AddButtonActionListener implements ActionListener {
         
         @Override
@@ -340,6 +357,9 @@ public class Controller {
         
     }
     
+    /**
+     *Action listener for Save button in save/load tab. Converts data into xml and saves it to 3 separate files in selected folder.
+     */
     public class SaveButtonActionListener implements ActionListener {
         
         @Override
@@ -384,9 +404,6 @@ public class Controller {
                 phylumWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(phylumFile)));
                 familyWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(familyFile)));
                 speciesWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(speciesFile)));
-                /*System.out.println("Phylum" + "\n" + phylumXml);
-                System.out.println("Family" + "\n" + familyXml);
-                System.out.println("Species" + "\n" + speciesXml);*/
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -401,16 +418,13 @@ public class Controller {
             } catch (IOException ex) {
                 Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
-            
-            
-            
-            
-            
         }
         
     }
     
+    /**
+     *Loads data from selected folder
+     */
     public class LoadButtonActionListener implements ActionListener{
         
         @Override
@@ -474,10 +488,6 @@ public class Controller {
             familyHM = (HashMap<String, Family>) xStream.fromXML(familyXml);
             speciesHM = (HashMap<String, Species>) xStream.fromXML(speciesXml);
             
-            /*System.out.println("Phylum po wczytaniu: " + "\n" + xStream.toXML(phylumHM));
-            System.out.println("Family po wczytaniu: " + "\n" + xStream.toXML(familyHM));
-            System.out.println("Species po wczytaniu: " + "\n" + xStream.toXML(speciesHM));*/
-            
             theModel.setPhylumMap(phylumHM);
             theModel.setFamilyMap(familyHM);
             theModel.setSpeciesMap(speciesHM);
@@ -487,6 +497,9 @@ public class Controller {
         }
     }
     
+    /**
+     *Performs search action on all program data
+     */
     public class SearchButtonActionListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e)
@@ -514,8 +527,13 @@ public class Controller {
            
             
             }
-        
-    public String transformRegexp(String regexp)
+
+        /**
+         *Translates standard wildcards-like regular expressions to expressions that Java can understand and fixes potential regexp errors 
+         * @param regexp
+         * @return 
+         */
+        public String transformRegexp(String regexp)
     {
         String suffix = "";
         if(regexp.endsWith("*"))
@@ -551,6 +569,9 @@ public class Controller {
     
     }
     
+    /**
+     *Action listener for Name combobox
+     */
     public class NameCBActionListener implements ActionListener {
         
         @Override
@@ -618,21 +639,11 @@ public class Controller {
             }
         }
         
-    }
+    }  
     
-    /*public class SearchByFamilyNameButtonActionListener implements ActionListener {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    theView.searchResultsComboBoxUpdate(theModel.searchByFamilyName(theView.getSearchTextField()));
-                } catch (RuntimeException ex) {
-                    JOptionPane.showMessageDialog(theView, "Brak wyników, proszę wprowadzić inny klucz");
-                }
-            }
-            
-        }*/
-    
+    /**
+    *Shows all species existing in the program
+    */
     public class ShowAllButtonActionListener implements ActionListener {
 
             @Override
@@ -643,8 +654,11 @@ public class Controller {
             }
             
         }
-        
-        public class SearchByLimbCountButtonActionListener implements ActionListener {
+
+    /**
+     *Performs search by limb count
+     */
+    public class SearchByLimbCountButtonActionListener implements ActionListener {
 
             @Override
             public void actionPerformed(ActionEvent e) 

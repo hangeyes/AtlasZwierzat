@@ -22,6 +22,14 @@ public class Species{
     private String representantName;
     private Family family;
     
+    /**
+     *
+     * @param family
+     * @param speciesName
+     * @param discoveryDate
+     * @param limbCount
+     * @param representantName
+     */
     public Species(Family family, String speciesName, String discoveryDate, int limbCount, String representantName) {
         this.family = family;
         this.speciesName = speciesName;

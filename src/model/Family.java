@@ -17,6 +17,13 @@ public class Family {
     private float averageLimbCount;
     private Phylum phylum;
 
+    /**
+     *
+     * @param phylum
+     * @param familyName
+     * @param characteristic
+     * @param averageLimbCount
+     */
     public Family(Phylum phylum, String familyName, String characteristic, float averageLimbCount) {
         this.phylum = phylum;
         this.familyName = familyName;

@@ -20,10 +20,16 @@ import model.Species;
 
 /**
  *
- * @author Hangeyes
+ * Class used in converting SpeciesHashMap from Model into xml and reversing it. For more details check xstream library documentation.
  */
 public class SpeciesHashMapConverter implements Converter{
 
+    /**
+     *
+     * @param o
+     * @param writer
+     * @param mc
+     */
     @Override
     public void marshal(Object o, HierarchicalStreamWriter writer, MarshallingContext mc) {
         HashMap<String, Species> speciesHashMap = (HashMap<String, Species>) o;
@@ -51,6 +57,12 @@ public class SpeciesHashMapConverter implements Converter{
         }
     }
 
+    /**
+     *
+     * @param reader
+     * @param uc
+     * @return
+     */
     @Override
     public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext uc) {
         HashMap<String, Species> speciesHashMap = new HashMap<String, Species>();
@@ -74,6 +86,11 @@ public class SpeciesHashMapConverter implements Converter{
         return speciesHashMap;
     }
 
+    /**
+     *
+     * @param type
+     * @return
+     */
     @Override
     public boolean canConvert(Class type) {
         return SpeciesHashMapConverter.class == type;

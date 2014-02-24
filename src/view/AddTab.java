@@ -28,6 +28,10 @@ public class AddTab extends javax.swing.JPanel implements ActionListener{
         speciesRadioButton.addActionListener(this);
     }
     
+    /**
+    Returns name of RadioButton checked in AddTab
+    */
+    
      public String getCheckedRadioButton()
     {
         if(phylumRadioButton.isSelected())
@@ -232,18 +236,15 @@ public class AddTab extends javax.swing.JPanel implements ActionListener{
     private javax.swing.JRadioButton speciesRadioButton;
     javax.swing.JTextField speciesRepresentantTextField;
     // End of variables declaration//GEN-END:variables
-
+    /*
+    speciesName1CB and speciesName2CB are needed only when creating a hybrid
+    speciesNameCB is currently selected species
+    */
     
-    /*class RadioButtonListener implements ActionListener
-    {
-        void RadioButtonListener()
-        {
-            phylumRadioButton.addActionListener(this);
-            familyRadioButton.addActionListener(this);
-            speciesRadioButton.addActionListener(this);
-            
-        }*/
         @Override
+        /*
+        ActionListener for every RadioButton in AddTab
+        */
         public void actionPerformed(ActionEvent e) {
             Object source = e.getSource();
             if (source == phylumRadioButton)
@@ -322,7 +323,5 @@ public class AddTab extends javax.swing.JPanel implements ActionListener{
             }
                     
         }
-    //}
-
     
 }

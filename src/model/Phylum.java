@@ -16,6 +16,12 @@ public class Phylum {
     private int population;
     private String anatomy;
     
+    /**
+     *
+     * @param name
+     * @param population
+     * @param anatomy
+     */
     public Phylum(String name, int population, String anatomy) {
         this.phylumName = name;
         this.population = population;
